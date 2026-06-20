@@ -20,7 +20,7 @@ const features: Feature[] = [
   {
     icon: "feature-save-memories.png",
     title: "Save Memories",
-    body: "Pose together and save every moment.",
+    body: "Pose and save every moment.",
   },
 ];
 

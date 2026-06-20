@@ -38,7 +38,7 @@ export function ScrapbookHero() {
       {/* <img className="tape tape-cafe" src={image("tape-yellow.png")} alt="" /> */}
       <img className="tape tape-memory" src={image("tape-peach.png")} alt="" />
 
-      <span className="label label-ar">A R Scene</span>
+      <span className="label label-ar">Real Scene</span>
       <span className="label label-character">Character Swap</span>
       <span className="label label-pose">Pose Together</span>
       <span className="caption caption-ar">Sunday At Home</span>
