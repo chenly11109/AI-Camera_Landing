@@ -26,7 +26,9 @@ export default function App() {
         </div>
       </section>
 
-      <ScrapbookHero />
+      <div className="scrapbook-stage">
+        <ScrapbookHero />
+      </div>
 
       <div className="bottom-layout">
         <QrCard />
