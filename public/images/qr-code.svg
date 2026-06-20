@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 280" role="img" aria-labelledby="title">
+  <title id="title">QR code placeholder</title>
+  <rect width="280" height="280" rx="18" fill="#fff"/>
+  <rect x="18" y="18" width="68" height="68" fill="#111"/>
+  <rect x="32" y="32" width="40" height="40" fill="#fff"/>
+  <rect x="44" y="44" width="16" height="16" fill="#111"/>
+  <rect x="194" y="18" width="68" height="68" fill="#111"/>
+  <rect x="208" y="32" width="40" height="40" fill="#fff"/>
+  <rect x="220" y="44" width="16" height="16" fill="#111"/>
+  <rect x="18" y="194" width="68" height="68" fill="#111"/>
+  <rect x="32" y="208" width="40" height="40" fill="#fff"/>
+  <rect x="44" y="220" width="16" height="16" fill="#111"/>
+  <path fill="#111" d="M110 20h18v18h-18zM146 20h18v18h-18zM128 38h18v18h-18zM164 38h18v36h-18zM110 74h36v18h-36zM20 110h18v36H20zM56 110h18v18H56zM92 110h36v18H92zM146 110h18v18h-18zM182 110h18v36h-18zM218 110h18v18h-18zM254 110h8v36h-8zM38 146h36v18H38zM92 146h18v18H92zM128 146h54v18h-54zM200 146h36v18h-36zM254 164h8v18h-8zM110 182h18v36h-18zM146 182h36v18h-36zM200 182h18v18h-18zM236 182h26v18h-26zM92 218h18v18H92zM128 218h18v18h-18zM164 218h18v36h-18zM200 218h36v18h-36zM254 218h8v44h-8zM110 254h36v8h-36zM182 254h18v8h-18zM218 254h18v8h-18z"/>
+</svg>
