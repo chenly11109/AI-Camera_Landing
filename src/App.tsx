@@ -10,7 +10,10 @@ export default function App() {
       <div className="paper-texture" aria-hidden="true" />
 
       <header className="topbar">
-        <img className="brand-lockup" src={image("brand-lockup.png")} alt="Pika Snap" />
+        <a className="brand-lockup" href="/" aria-label="Kira Snap">
+          <img className="brand-logo-mark" src={image("kira-snap-logo-flat-stars.webp")} alt="" />
+          <img className="brand-title-mark" src={image("kira-snap-title.webp")} alt="Kira Snap" />
+        </a>
         <div className="mobile-store">
           <StoreButton />
         </div>
@@ -35,7 +38,7 @@ export default function App() {
         <FeatureList />
       </div>
 
-      <footer>@2026 Pika Snap. All rights Reserved.</footer>
+      <footer>@2026 Kira Snap. All rights Reserved.</footer>
     </main>
   );
 }

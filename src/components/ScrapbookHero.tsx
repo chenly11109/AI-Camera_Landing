@@ -10,7 +10,7 @@ function PhotoFill({ className, src, alt }: { className: string; src: string; al
 
 export function ScrapbookHero() {
   return (
-    <section className="scrapbook-wrap" aria-label="Pika Snap scrapbook examples">
+    <section className="scrapbook-wrap" aria-label="Kira Snap scrapbook examples">
       <img className="album" src={image("album-spread.png")} alt="" />
 
       <PhotoFill className="photo-ar" src="photo-ar-scene.webp" alt="AR mannequin scene preview" />

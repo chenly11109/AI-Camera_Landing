@@ -26,7 +26,7 @@ const features: Feature[] = [
 
 export function FeatureList() {
   return (
-    <section className="features" aria-label="Pika Snap features">
+    <section className="features" aria-label="Kira Snap features">
       {features.map((feature) => (
         <article className="feature" key={feature.title}>
           <img src={image(feature.icon)} alt="" />

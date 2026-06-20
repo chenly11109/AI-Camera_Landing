@@ -72,14 +72,32 @@ img {
   position: relative;
   z-index: 20;
   display: flex;
-  align-items: center;
+  align-items: end;
   justify-content: space-between;
   gap: 24px;
 }
 
 .brand-lockup {
-  width: clamp(214px, 16vw, 258px);
-  height: auto;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  display: grid;
+  grid-template-columns: 31% 1fr;
+  column-gap: 3%;
+  align-items: end;
+  width: clamp(228px, 17vw, 282px);
+}
+
+.brand-logo-mark {
+  grid-column: 1;
+  grid-row: 1;
+  width: 100%;
+}
+
+.brand-title-mark {
+  grid-column: 2;
+  grid-row: 1;
+  width: 100%;
+  transform: translateY(-3px);
 }
 
 .mobile-store {
@@ -1029,7 +1047,7 @@ footer {
   }
 
   .brand-lockup {
-    padding-top:8px;
+    padding-top: 8px;
     width: min(43vw, 185px);
   }
 
