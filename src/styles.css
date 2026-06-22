@@ -656,9 +656,14 @@ img {
   letter-spacing: 0;
 }
 
-footer {
+.landing-footer {
   position: relative;
   z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
   color: #090909;
   font-size: 12px;
   text-align: center;
@@ -744,7 +749,7 @@ footer {
     gap: 18px;
   }
 
-  footer {
+  .landing-footer {
     margin-top: 30px;
     padding: 18px 0 0;
   }
@@ -1030,7 +1035,7 @@ footer {
     margin-top: 0;
   }
 
-  footer {
+  .landing-footer {
     margin-top: 30px;
     padding-bottom: 6px;
   }
@@ -1176,7 +1181,7 @@ footer {
     width: 28%;
   }
 
-  footer {
+  .landing-footer {
     margin-top: 10px;
     padding-bottom: 20px;
     margin-bottom: 100px;

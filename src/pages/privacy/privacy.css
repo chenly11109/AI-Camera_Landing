@@ -1,0 +1,143 @@
+.privacy-page {
+  min-height: 100svh;
+  background: #f7f4ee;
+  color: #222222;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "PingFang SC",
+    "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.65;
+}
+
+.privacy-shell {
+  width: min(880px, calc(100% - 44px));
+  margin: 0 auto;
+  padding: 48px 0 72px;
+}
+
+.privacy-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: start;
+  margin-bottom: 34px;
+}
+
+.privacy-eyebrow {
+  margin: 0 0 8px;
+  color: #8a5a00;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.privacy-page h1,
+.privacy-page h2,
+.privacy-page p {
+  margin-top: 0;
+}
+
+.privacy-page h1 {
+  margin-bottom: 10px;
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+.privacy-intro {
+  max-width: 760px;
+  margin-bottom: 10px;
+  color: #6a6258;
+  font-size: 16px;
+}
+
+.privacy-updated {
+  margin-bottom: 0;
+  color: #6a6258;
+  font-size: 15px;
+}
+
+.privacy-actions {
+  display: grid;
+  justify-items: end;
+  gap: 12px;
+}
+
+.privacy-language-switch {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid #d8d0c4;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.privacy-language-button {
+  min-width: 86px;
+  min-height: 36px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: #6a6258;
+  cursor: pointer;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.privacy-language-button.is-active {
+  background: #222222;
+  color: #ffffff;
+}
+
+.privacy-content {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid #d8d0c4;
+}
+
+.privacy-content section {
+  padding: 30px 0 0;
+}
+
+.privacy-content h2 {
+  margin-bottom: 12px;
+  font-size: 21px;
+  line-height: 1.25;
+}
+
+.privacy-content p {
+  color: #6a6258;
+}
+
+.privacy-content p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 720px) {
+  .privacy-shell {
+    width: min(100% - 32px, 880px);
+    padding: 28px 0 48px;
+  }
+
+  .privacy-header {
+    grid-template-columns: 1fr;
+  }
+
+  .privacy-actions {
+    justify-items: stretch;
+  }
+
+  .privacy-language-switch {
+    width: 100%;
+  }
+
+  .privacy-language-button {
+    width: 100%;
+  }
+
+  .privacy-content section {
+    padding-top: 28px;
+  }
+}
