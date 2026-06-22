@@ -25,15 +25,16 @@ type PrivacyContent = {
 const privacyContent: Record<Language, PrivacyContent> = {
   zh: {
     htmlLang: "zh-CN",
-    eyebrow: "AI Camera",
+    eyebrow: "Kira Snap: AI Anime Camera & Photo Album",
     title: "隐私政策与服务条款",
-    intro: "本页面说明 AI Camera 如何处理与你使用本应用相关的信息，以及使用服务时需要遵守的基本条款。",
+    intro:
+      "Kira Snap 是一款 AI 动漫相机与照片相册应用，用于创建、摆拍、保存和整理你的角色照片时刻。",
     updated: `最后更新日期：${UPDATED_DATE}`,
     sections: [
       {
         title: "我们处理的信息",
         paragraphs: [
-          "当你使用 AI Camera 时，我们可能会处理你主动提供或使用功能时产生的信息，包括账号信息、昵称、头像、你选择或拍摄的照片和视频、生成任务与结果、积分和购买记录、反馈内容，以及用于维护服务安全和稳定的必要信息。",
+          "当你使用 Kira Snap 时，我们可能会处理你主动提供或使用功能时产生的信息，包括账号信息、昵称、头像、你选择或拍摄的照片和视频、生成任务与结果、积分和购买记录、反馈内容，以及用于维护服务安全和稳定的必要信息。",
           "我们只会在提供应用功能、维护账号、处理购买、展示生成结果、响应反馈、保障安全或遵守法律要求所需的范围内处理这些信息。",
         ],
       },
@@ -47,14 +48,14 @@ const privacyContent: Record<Language, PrivacyContent> = {
       {
         title: "相机、相册与人像数据",
         paragraphs: [
-          "如果你授予相机或相册权限，AI Camera 会使用这些权限来拍摄、选择、上传、保存或生成你请求的内容。你可以随时在系统设置中关闭相关权限。",
+          "如果你授予相机或相册权限，Kira Snap 会使用这些权限来拍摄、选择、上传、保存或生成你请求的内容。你可以随时在系统设置中关闭相关权限。",
           "我们不会为了广告、营销、画像或训练目的而保留你的相机、相册、照片、视频、头像或人像数据。",
         ],
       },
       {
         title: "AI 生成内容",
         paragraphs: [
-          "AI Camera 会根据你选择的素材、模板和操作生成图片或视频。生成结果可能与你预期不同，请在保存或分享前自行确认。",
+          "Kira Snap 会根据你选择的素材、模板和操作生成图片或视频。生成结果可能与你预期不同，请在保存或分享前自行确认。",
           "用户上传的图片、视频、头像、人像数据以及生成图片或视频不会被我们为了训练 AI 模型而保留。",
           "用户生成内容只会短时间保留在云端，用于提供生成结果、结果加载、同步、问题排查和改善服务体验。",
         ],
@@ -89,14 +90,14 @@ const privacyContent: Record<Language, PrivacyContent> = {
       {
         title: "儿童",
         paragraphs: [
-          "AI Camera 并非专门面向儿童的儿童类应用。若你认为儿童向我们提供了个人信息，请联系我们，我们会采取适当措施。",
+          "Kira Snap 并非专门面向儿童的儿童类应用。若你认为儿童向我们提供了个人信息，请联系我们，我们会采取适当措施。",
         ],
       },
       {
         title: "服务条款",
         paragraphs: [
           "你应确保上传、生成、保存或分享的内容不侵犯他人权利，不包含违法、骚扰、仇恨、色情、暴力、欺诈或其他不当内容。",
-          "AI Camera 按现状提供服务。我们会努力保持服务稳定和安全，但不保证生成结果始终准确、完整或适合特定目的。",
+          "Kira Snap 按现状提供服务。我们会努力保持服务稳定和安全，但不保证生成结果始终准确、完整或适合特定目的。",
         ],
       },
       {
@@ -107,16 +108,16 @@ const privacyContent: Record<Language, PrivacyContent> = {
   },
   en: {
     htmlLang: "en",
-    eyebrow: "AI Camera",
+    eyebrow: "Kira Snap: AI Anime Camera & Photo Album",
     title: "Privacy Policy and Terms of Service",
     intro:
-      "This page explains how AI Camera handles information related to your use of the app and the basic terms that apply when you use the service.",
+      "An AI anime camera and photo album app for creating, posing, and saving character moments.",
     updated: `Last updated: ${UPDATED_DATE}`,
     sections: [
       {
         title: "Information We Process",
         paragraphs: [
-          "When you use AI Camera, we may process information you provide or create through app features, including account information, display name, avatar, photos and videos you choose or capture, generation tasks and results, credits and purchase records, feedback, and information needed to keep the service safe and reliable.",
+          "When you use Kira Snap, we may process information you provide or create through app features, including account information, display name, avatar, photos and videos you choose or capture, generation tasks and results, credits and purchase records, feedback, and information needed to keep the service safe and reliable.",
           "We process this information only as needed to provide app features, maintain accounts, process purchases, show generated results, respond to feedback, protect safety, or comply with legal requirements.",
         ],
       },
@@ -130,14 +131,14 @@ const privacyContent: Record<Language, PrivacyContent> = {
       {
         title: "Camera, Photo Library, and Portrait Data",
         paragraphs: [
-          "If you grant camera or photo library permissions, AI Camera uses those permissions to capture, select, upload, save, or generate content you request. You can turn these permissions off at any time in system settings.",
+          "If you grant camera or photo library permissions, Kira Snap uses those permissions to capture, select, upload, save, or generate content you request. You can turn these permissions off at any time in system settings.",
           "We do not retain your camera, photo library, photo, video, avatar, or portrait data for advertising, marketing, profiling, or training purposes.",
         ],
       },
       {
         title: "AI-Generated Content",
         paragraphs: [
-          "AI Camera generates images or videos based on the materials, templates, and actions you choose. Generated results may differ from what you expected, so please review them before saving or sharing.",
+          "Kira Snap generates images or videos based on the materials, templates, and actions you choose. Generated results may differ from what you expected, so please review them before saving or sharing.",
           "We do not retain user-uploaded images, videos, avatars, portrait data, or generated images or videos for the purpose of training AI models.",
           "User-generated content is kept in the cloud only for a limited period to provide generated results, load results, sync, troubleshoot issues, and improve the service experience.",
         ],
@@ -172,14 +173,14 @@ const privacyContent: Record<Language, PrivacyContent> = {
       {
         title: "Children",
         paragraphs: [
-          "AI Camera is not directed to children as a children's app. If you believe a child has provided personal information, contact us and we will take appropriate steps.",
+          "Kira Snap is not directed to children as a children's app. If you believe a child has provided personal information, contact us and we will take appropriate steps.",
         ],
       },
       {
         title: "Terms of Service",
         paragraphs: [
           "You must ensure that content you upload, generate, save, or share does not infringe others' rights and does not include illegal, harassing, hateful, sexual, violent, fraudulent, or otherwise inappropriate content.",
-          "AI Camera is provided as is. We work to keep the service stable and secure, but we do not guarantee that generated results will always be accurate, complete, or fit for a particular purpose.",
+          "Kira Snap is provided as is. We work to keep the service stable and secure, but we do not guarantee that generated results will always be accurate, complete, or fit for a particular purpose.",
         ],
       },
       {
