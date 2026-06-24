@@ -2,7 +2,7 @@ import { useEffect, useMemo } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import "./privacy.css";
 
-const UPDATED_DATE = "2026-06-18";
+const UPDATED_DATE = "2026-06-23";
 const CONTACT_EMAIL = "chenlingya109@gmail.com";
 const LANGUAGE_STORAGE_KEY = "ai-camera-privacy-language";
 
@@ -57,7 +57,9 @@ const privacyContent: Record<Language, PrivacyContent> = {
         paragraphs: [
           "Kira Snap 会根据你选择的素材、模板和操作生成图片或视频。生成结果可能与你预期不同，请在保存或分享前自行确认。",
           "用户上传的图片、视频、头像、人像数据以及生成图片或视频不会被我们为了训练 AI 模型而保留。",
-          "用户生成内容只会短时间保留在云端，用于提供生成结果、结果加载、同步、问题排查和改善服务体验。",
+          "你的应用内相册、本地生成历史和保存到设备的内容保存在你的设备本地，不会由 Kira Snap 公开发布。",
+          "当你使用云端生成、同步、反馈或结果加载功能时，上传素材和生成结果可能会在云端短时间处理或保留，用于提供生成结果、结果加载、同步、问题排查和改善服务体验。",
+          "云端生成结果只会短期保留。你有责任在结果可用期间及时打开结果，并将想要保留的图片或视频保存到应用内相册或你的设备中。",
         ],
       },
       {
@@ -76,8 +78,9 @@ const privacyContent: Record<Language, PrivacyContent> = {
       {
         title: "数据保留与删除",
         paragraphs: [
-          "我们只在实现本政策所述目的所需的时间内保留信息。用户生成内容会短时间保留在云端，以便交付结果、加载结果、同步、排查问题和改善服务体验。",
-          "你可以删除本地生成历史，或通过下方邮箱联系我们，请求访问、更正或删除与你账号相关的信息。法律、安全或争议处理需要的记录可能会在必要期限内保留。",
+          "我们只在实现本政策所述目的所需的时间内保留信息。你的应用内相册和本地生成历史保存在设备本地；用户生成内容仅在需要交付结果、加载结果、同步、排查问题或改善服务体验时短时间保留在云端。",
+          "云端素材和生成结果可能在短期保留期限后无法继续访问或恢复。你有责任在结果可用期间打开并保存想要保留的内容。",
+          "你可以在应用或设备中删除本地相册内容、本地生成历史或已保存内容，也可以通过下方邮箱联系我们，请求访问、更正或删除与你账号相关的信息。法律、安全、侵权投诉或争议处理需要的记录可能会在必要期限内保留。",
         ],
       },
       {
@@ -96,7 +99,10 @@ const privacyContent: Record<Language, PrivacyContent> = {
       {
         title: "服务条款",
         paragraphs: [
-          "你应确保上传、生成、保存或分享的内容不侵犯他人权利，不包含违法、骚扰、仇恨、色情、暴力、欺诈或其他不当内容。",
+          "你应确保上传、使用、生成、保存或分享的角色、图片、照片、视频和其他素材不侵犯他人权利，不包含违法、骚扰、仇恨、色情、暴力、欺诈或其他不当内容。",
+          "生成的图片和视频仅供个人、非商业用途。除非你已取得所有必要权利和许可，否则不得出售、授权、变现、制作或发布为商业商品、用于广告，或以其他商业方式利用生成内容。",
+          "你对在 Kira Snap 中上传或使用的角色、图片、照片和其他素材负责。Kira Snap 不向你授予任何第三方角色、品牌、艺术作品、照片或其他受保护素材的权利。",
+          "如果我们认为上传或生成的云端内容侵犯版权、商标权、隐私权、肖像权或其他权利，或违反本条款，我们可以删除或禁用相关云端内容、限制云端功能或暂停账号。保存在你设备本地或应用内本地相册中的内容由你自行管理。",
           "Kira Snap 按现状提供服务。我们会努力保持服务稳定和安全，但不保证生成结果始终准确、完整或适合特定目的。",
         ],
       },
@@ -140,7 +146,9 @@ const privacyContent: Record<Language, PrivacyContent> = {
         paragraphs: [
           "Kira Snap generates images or videos based on the materials, templates, and actions you choose. Generated results may differ from what you expected, so please review them before saving or sharing.",
           "We do not retain user-uploaded images, videos, avatars, portrait data, or generated images or videos for the purpose of training AI models.",
-          "User-generated content is kept in the cloud only for a limited period to provide generated results, load results, sync, troubleshoot issues, and improve the service experience.",
+          "Your in-app album, local generation history, and content saved to your device are stored locally on your device and are not publicly posted by Kira Snap.",
+          "When you use cloud generation, sync, feedback, or result-loading features, uploaded materials and generated results may be processed or kept in the cloud for a limited period to provide generated results, load results, sync, troubleshoot issues, and improve the service experience.",
+          "Cloud-generated results are retained only for a short period. You are responsible for opening available results in time and saving any images or videos you want to keep to the in-app album or your device.",
         ],
       },
       {
@@ -159,8 +167,9 @@ const privacyContent: Record<Language, PrivacyContent> = {
       {
         title: "Data Retention and Deletion",
         paragraphs: [
-          "We retain information only for as long as needed for the purposes described in this policy. User-generated content is kept in the cloud for a limited period so results can be delivered, loaded, synced, troubleshot, and used to improve the service experience.",
-          "You can delete local generation history or contact us at the email below to request access, correction, or deletion of information associated with your account. Records needed for legal, safety, or dispute handling may be retained for the necessary period.",
+          "We retain information only for as long as needed for the purposes described in this policy. Your in-app album and local generation history are stored locally on your device; user-generated content is kept in the cloud only when needed to deliver results, load results, sync, troubleshoot issues, or improve the service experience.",
+          "Cloud materials and generated results may become unavailable or unrecoverable after the short retention period. You are responsible for opening and saving content you want to keep while it is available.",
+          "You can delete local album content, local generation history, or saved content in the app or on your device. You may also contact us at the email below to request access, correction, or deletion of information associated with your account. Records needed for legal, safety, infringement complaint, or dispute handling may be retained for the necessary period.",
         ],
       },
       {
@@ -179,7 +188,10 @@ const privacyContent: Record<Language, PrivacyContent> = {
       {
         title: "Terms of Service",
         paragraphs: [
-          "You must ensure that content you upload, generate, save, or share does not infringe others' rights and does not include illegal, harassing, hateful, sexual, violent, fraudulent, or otherwise inappropriate content.",
+          "You must ensure that characters, images, photos, videos, and other materials you upload, use, generate, save, or share do not infringe others' rights and do not include illegal, harassing, hateful, sexual, violent, fraudulent, or otherwise inappropriate content.",
+          "Generated images and videos are provided for personal, non-commercial use. You may not sell, license, monetize, publish as commercial merchandise, use in advertising, or otherwise exploit generated content for commercial purposes unless you have all necessary rights and permissions.",
+          "You are responsible for the characters, images, photos, and other materials you upload or use in Kira Snap. Kira Snap does not grant you any rights to third-party characters, brands, artworks, photos, or other protected materials.",
+          "We may remove or disable related cloud content, restrict cloud features, or suspend accounts if we believe uploaded or generated cloud content violates copyright, trademark, privacy, publicity, or other rights, or otherwise violates these terms. Content saved locally on your device or in the local in-app album is managed by you.",
           "Kira Snap is provided as is. We work to keep the service stable and secure, but we do not guarantee that generated results will always be accurate, complete, or fit for a particular purpose.",
         ],
       },
