@@ -111,6 +111,14 @@
   color: #6a6258;
 }
 
+.privacy-content a {
+  color: #8a5a00;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
 .privacy-content p:last-child {
   margin-bottom: 0;
 }

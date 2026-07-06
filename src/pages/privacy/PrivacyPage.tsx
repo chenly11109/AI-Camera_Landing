@@ -2,15 +2,22 @@ import { useEffect, useMemo } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import "./privacy.css";
 
-const UPDATED_DATE = "2026-06-23";
+const UPDATED_DATE = "2026-07-06";
 const CONTACT_EMAIL = "chenlingya109@gmail.com";
 const LANGUAGE_STORAGE_KEY = "ai-camera-privacy-language";
+const EULA_URL = "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/";
 
 type Language = "zh" | "en";
+
+type PrivacyLink = {
+  label: string;
+  url: string;
+};
 
 type PrivacySection = {
   title: string;
   paragraphs: string[];
+  links?: PrivacyLink[];
 };
 
 type PrivacyContent = {
@@ -50,6 +57,17 @@ const privacyContent: Record<Language, PrivacyContent> = {
         paragraphs: [
           "如果你授予相机或相册权限，Kira Snap 会使用这些权限来拍摄、选择、上传、保存或生成你请求的内容。你可以随时在系统设置中关闭相关权限。",
           "我们不会为了广告、营销、画像或训练目的而保留你的相机、相册、照片、视频、头像或人像数据。",
+        ],
+      },
+      {
+        title: "TrueDepth 与脸部数据",
+        paragraphs: [
+          "Kira Snap 仅通过 ARKit 使用 TrueDepth/face tracking 数据，用于前置相机 AR 功能中的实时脸部遮挡，使虚拟内容可以正确显示在用户脸部前方或后方。",
+          "在当前 AR 会话期间，应用可能会在设备本地实时处理 face anchors、face geometry、face mesh、blend shapes，以及 depth/face tracking signals。",
+          "我们不会保存 raw TrueDepth data、face geometry、face mesh、blend shapes、depth maps 或 face tracking data。",
+          "我们不会将 raw TrueDepth data 上传到服务器，也不会与第三方分享这些数据。",
+          "我们不会将 TrueDepth 或脸部追踪数据用于身份识别、用户认证、建立人脸档案、推断个人特征、广告、营销、用户画像或 AI 模型训练。",
+          "如果用户主动保存或上传拍摄的照片或视频，该媒体可能包含可见的相机画面，但不包含 raw TrueDepth face geometry 或 face tracking data。",
         ],
       },
       {
@@ -105,6 +123,12 @@ const privacyContent: Record<Language, PrivacyContent> = {
           "如果我们认为上传或生成的云端内容侵犯版权、商标权、隐私权、肖像权或其他权利，或违反本条款，我们可以删除或禁用相关云端内容、限制云端功能或暂停账号。保存在你设备本地或应用内本地相册中的内容由你自行管理。",
           "Kira Snap 按现状提供服务。我们会努力保持服务稳定和安全，但不保证生成结果始终准确、完整或适合特定目的。",
         ],
+        links: [
+          {
+            label: "使用条款（EULA）",
+            url: EULA_URL,
+          },
+        ],
       },
       {
         title: "联系我们",
@@ -139,6 +163,17 @@ const privacyContent: Record<Language, PrivacyContent> = {
         paragraphs: [
           "If you grant camera or photo library permissions, Kira Snap uses those permissions to capture, select, upload, save, or generate content you request. You can turn these permissions off at any time in system settings.",
           "We do not retain your camera, photo library, photo, video, avatar, or portrait data for advertising, marketing, profiling, or training purposes.",
+        ],
+      },
+      {
+        title: "TrueDepth and Face Data",
+        paragraphs: [
+          "Kira Snap uses TrueDepth/ARKit face tracking data only for real-time face occlusion in front-camera AR features, so virtual content can appear correctly in front of or behind the user's face.",
+          "During the active AR session, the app may process face anchors, face geometry, face mesh, blend shapes, and depth/face tracking signals locally on the device in real time.",
+          "We do not store raw TrueDepth data, face geometry, face mesh, blend shapes, depth maps, or face tracking data.",
+          "We do not upload raw TrueDepth data to our servers, and we do not share this data with third parties.",
+          "We do not use TrueDepth or face tracking data to identify users, authenticate users, create face profiles, infer personal characteristics, advertise, market, profile users, or train AI models.",
+          "If a user chooses to save or upload a captured photo or video, that media may contain the visible camera image, but it does not include raw TrueDepth face geometry or face tracking data.",
         ],
       },
       {
@@ -193,6 +228,12 @@ const privacyContent: Record<Language, PrivacyContent> = {
           "You are responsible for the characters, images, photos, and other materials you upload or use in Kira Snap. Kira Snap does not grant you any rights to third-party characters, brands, artworks, photos, or other protected materials.",
           "We may remove or disable related cloud content, restrict cloud features, or suspend accounts if we believe uploaded or generated cloud content violates copyright, trademark, privacy, publicity, or other rights, or otherwise violates these terms. Content saved locally on your device or in the local in-app album is managed by you.",
           "Kira Snap is provided as is. We work to keep the service stable and secure, but we do not guarantee that generated results will always be accurate, complete, or fit for a particular purpose.",
+        ],
+        links: [
+          {
+            label: "Terms of Use (EULA)",
+            url: EULA_URL,
+          },
         ],
       },
       {
@@ -269,6 +310,13 @@ function PrivacyPageContent({ language }: { language: Language }) {
               <h2>{section.title}</h2>
               {section.paragraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
+              ))}
+              {section.links?.map((link) => (
+                <p className="privacy-link-paragraph" key={link.url}>
+                  <a href={link.url} target="_blank" rel="noreferrer">
+                    {link.label}: {link.url}
+                  </a>
+                </p>
               ))}
             </section>
           ))}
