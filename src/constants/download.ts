@@ -1,1 +1,1 @@
-export const APP_STORE_DOWNLOAD_URL = "https://apps.apple.com/app/id6756397480";
+export const APP_STORE_DOWNLOAD_URL = "https://kira-snap.vercel.app/d";

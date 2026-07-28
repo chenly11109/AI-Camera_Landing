@@ -1,0 +1,19 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": [
+          "R66L64YF3T.com.aicamera.picbuddy",
+          "R66L64YF3T.com.aicamera.picbuddy.cn"
+        ],
+        "components": [
+          {
+            "/": "/xhs/*",
+            "comment": "Reserved for Xiaohongshu share callbacks."
+          }
+        ]
+      }
+    ]
+  }
+}
