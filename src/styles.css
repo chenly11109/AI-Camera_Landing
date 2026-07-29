@@ -124,6 +124,10 @@ img {
   visibility: hidden;
 }
 
+.print-pitch {
+  display: none;
+}
+
 .hero-copy h1 span {
   color: var(--orange);
 }
@@ -957,7 +961,13 @@ img {
   }
 
   .hero-copy .hero-subtitle {
-    display: none;
+    display: block !important;
+    visibility: visible !important;
+    max-width: 56mm;
+    margin: 4.5mm 0 0;
+    color: #765845;
+    font-size: 3.5mm;
+    line-height: 1.32;
   }
 
   .scrapbook-stage {
@@ -1185,5 +1195,285 @@ img {
     margin-top: 10px;
     padding-bottom: 20px;
     margin-bottom: 100px;
+  }
+}
+
+@page {
+  size: Letter landscape;
+  margin: 0;
+}
+
+@media print {
+  :root {
+    background: #fff4e7;
+  }
+
+  html,
+  body,
+  #root {
+    width: 11in;
+    height: 8.5in;
+    min-height: 0;
+  }
+
+  body {
+    min-width: 0;
+    overflow: hidden;
+    background: #fff4e7;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .landing-page {
+    position: relative;
+    width: 11in;
+    height: 8.5in;
+    min-height: 8.5in;
+    padding: 10mm 10mm 5mm;
+    overflow: hidden;
+    background-size: 8mm 8mm, 8mm 8mm, auto;
+  }
+
+  .paper-texture {
+    opacity: 0.42;
+  }
+
+  .topbar {
+    position: fixed;
+    top: 10mm;
+    left: 10mm;
+    z-index: 100;
+    width: 66mm;
+  }
+
+  .brand-lockup {
+    width: 60mm;
+  }
+
+  .hero-copy {
+    width: 72mm;
+    margin-top: 30mm;
+  }
+
+  .hero-copy h1 {
+    max-width: 70mm;
+    font-size: 13.5mm;
+    line-height: 0.9;
+  }
+
+  .hero-copy h1::after {
+    content: "";
+    display: block;
+    width: 11mm;
+    height: 1.5mm;
+    margin: 2.2mm 0 0 0.8mm;
+    border-top: 0.65mm solid var(--orange);
+    border-radius: 50%;
+    box-shadow: 0 1.1mm 0 -0.25mm var(--orange);
+    transform: rotate(-4deg);
+  }
+
+  .hero-copy::before {
+    content: "";
+    position: absolute;
+    top: 11mm;
+    right: -15mm;
+    width: 8mm;
+    height: 8mm;
+    background: url("/images/sparkle-four.png") center / contain no-repeat;
+  }
+
+  .hero-copy .hero-subtitle {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  .print-pitch {
+    position: relative;
+    display: block;
+    width: 64mm;
+    margin-top: 6mm;
+    color: #3f2a20;
+  }
+
+  .print-pitch::before {
+    content: "";
+    position: absolute;
+    top: -15mm;
+    right: 4mm;
+    width: 8mm;
+    height: 8mm;
+    background: url("/images/sticker-paw.png") center / contain no-repeat;
+    transform: rotate(-9deg);
+  }
+
+  .print-pitch::after {
+    content: "✦";
+    position: absolute;
+    top: -0.5mm;
+    right: -2mm;
+    color: #f8b945;
+    font-size: 6mm;
+    line-height: 1;
+  }
+
+  .print-pitch strong {
+    display: block;
+    font-size: 4.8mm;
+    line-height: 1.1;
+  }
+
+  .print-pitch p {
+    max-width: 58mm;
+    margin: 3mm 0 0;
+    color: #3f2a20;
+    font-size: 3.8mm;
+    line-height: 1.28;
+  }
+
+  .mobile-store {
+    display: none;
+  }
+
+  .desktop-store {
+    display: none;
+  }
+
+  .store-button {
+    width: 59mm;
+    min-height: 16mm;
+    gap: 2mm;
+    padding: 2.5mm 5mm;
+    border-width: 0.4mm;
+    border-radius: 5.2mm;
+    box-shadow:
+      0 3mm 5mm rgba(118, 74, 40, 0.13),
+      inset 0 0.2mm 0.2mm rgba(255, 255, 255, 0.86);
+  }
+
+  .store-icon {
+    width: 10mm;
+    font-size: 10mm;
+  }
+
+  .store-copy {
+    gap: 0.7mm;
+  }
+
+  .store-copy span {
+    font-size: 4mm;
+  }
+
+  .store-copy strong {
+    font-size: 7mm;
+  }
+
+  .scrapbook-stage {
+    display: contents;
+  }
+
+  .scrapbook-wrap {
+    top: 7mm;
+    right: -13mm;
+    left: auto;
+    width: 195mm;
+    transform: rotate(-5.2deg);
+    transform-origin: center;
+    filter: drop-shadow(0 6mm 6mm rgba(122, 73, 39, 0.17));
+  }
+
+  .label {
+    font-size: 2.7mm;
+  }
+
+  .caption {
+    font-size: 2.1mm;
+  }
+
+  .caption-memory {
+    font-size: 2.9mm;
+  }
+
+  .bottom-layout {
+    position: absolute;
+    z-index: 13;
+    right: 8mm;
+    bottom: 11mm;
+    left: 13mm;
+    display: grid;
+    grid-template-columns: 64mm 1fr;
+    align-items: end;
+    gap: 18mm;
+    margin: 0;
+  }
+
+  .qr-card {
+    --qr-code-size: 52mm;
+    --qr-edge-padding: 5.5mm;
+    --qr-top-padding: 3.5mm;
+    --qr-title-gap: 1.5mm;
+    width: 64mm;
+    min-height: 0;
+    order: initial;
+    padding: var(--qr-top-padding) var(--qr-edge-padding) var(--qr-edge-padding);
+    border: 0.45mm solid #f8b945;
+    border-radius: 5mm;
+    box-shadow: none;
+  }
+
+  .qr-card::before {
+    display: none;
+  }
+
+  .qr-card h2 {
+    color: var(--orange);
+    font-family: "Bradley Hand", "Comic Sans MS", cursive;
+    font-size: 5.5mm;
+    font-weight: 600;
+  }
+
+  .qr-code {
+    width: var(--qr-code-size);
+    border-radius: 2mm;
+    box-shadow: 0 0.7mm 1.6mm rgba(61, 39, 24, 0.2);
+  }
+
+  .features {
+    min-width: 0;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    order: initial;
+    gap: 5mm;
+    padding: 0 0 4mm;
+  }
+
+  .feature {
+    width: 50mm;
+    gap: 2.8mm;
+  }
+
+  .feature img {
+    width: 14mm;
+    height: 14mm;
+  }
+
+  .feature h3 {
+    font-size: 4.5mm;
+  }
+
+  .feature p {
+    margin-top: 1mm;
+    font-size: 3mm;
+  }
+
+  .landing-footer {
+    position: absolute;
+    right: 0;
+    bottom: 3mm;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 2.2mm;
   }
 }

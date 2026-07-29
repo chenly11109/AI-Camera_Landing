@@ -24,6 +24,10 @@ export function LandingPage() {
           Bring your <span>favorite</span> character to life.
         </h1>
         <p className="hero-subtitle">Place, swap, pose, and save the moment.</p>
+        <div className="print-pitch" aria-hidden="true">
+          <strong>Pose. Swap. Save.</strong>
+          <p>Create memories with the characters you love.</p>
+        </div>
         <div className="desktop-store">
           <StoreButton />
         </div>
