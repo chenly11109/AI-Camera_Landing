@@ -1,7 +1,12 @@
+import { lazy, Suspense } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import { LandingPage } from "./pages/LandingPage";
 import { PrivacyPage } from "./pages/privacy/PrivacyPage";
 import { SupportPage } from "./pages/support/SupportPage";
+
+const SurveyPage = lazy(() => import("./pages/survey/SurveyPage").then((module) => ({
+  default: module.SurveyPage,
+})));
 
 export default function App() {
   return (
@@ -11,6 +16,7 @@ export default function App() {
       <Route path="/privacy/:language" element={<PrivacyPage />} />
       <Route path="/support" element={<Navigate to="/support/en" replace />} />
       <Route path="/support/:language" element={<SupportPage />} />
+      <Route path="/app/survey" element={<Suspense fallback={null}><SurveyPage /></Suspense>} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
