@@ -9,29 +9,22 @@ import {
 import type {SurveyDefinition} from "./surveyTypes";
 
 const CAMPAIGN_ID = "first_generation_survey_v1";
-const STAGING_FIREBASE_CONFIG = {
-  apiKey: "AIzaSyAfat9kaSge6FwTuC1bwa4U4RAC5jGUXXM",
-  authDomain: "ai-camera-app-9318b.firebaseapp.com",
-  projectId: "ai-camera-app-9318b",
-  storageBucket: "ai-camera-app-9318b.firebasestorage.app",
-  messagingSenderId: "35975432714",
-  appId: "1:35975432714:web:65ba0a10670bcd99756df3",
-};
 let database: Firestore | null = null;
 
-function configuredValue(value: string | undefined, fallback: string) {
-  return value?.trim() || fallback;
+function requiredEnvironmentValue(name: string, value: string | undefined) {
+  if (!value?.trim()) throw new Error(`Missing ${name}.`);
+  return value.trim();
 }
 
 function surveyDatabase() {
   if (database) return database;
   const app = initializeApp({
-    apiKey: configuredValue(import.meta.env.VITE_FIREBASE_API_KEY, STAGING_FIREBASE_CONFIG.apiKey),
-    authDomain: configuredValue(import.meta.env.VITE_FIREBASE_AUTH_DOMAIN, STAGING_FIREBASE_CONFIG.authDomain),
-    projectId: configuredValue(import.meta.env.VITE_FIREBASE_PROJECT_ID, STAGING_FIREBASE_CONFIG.projectId),
-    storageBucket: configuredValue(import.meta.env.VITE_FIREBASE_STORAGE_BUCKET, STAGING_FIREBASE_CONFIG.storageBucket),
-    messagingSenderId: configuredValue(import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID, STAGING_FIREBASE_CONFIG.messagingSenderId),
-    appId: configuredValue(import.meta.env.VITE_FIREBASE_APP_ID, STAGING_FIREBASE_CONFIG.appId),
+    apiKey: requiredEnvironmentValue("VITE_FIREBASE_API_KEY", import.meta.env.VITE_FIREBASE_API_KEY),
+    authDomain: requiredEnvironmentValue("VITE_FIREBASE_AUTH_DOMAIN", import.meta.env.VITE_FIREBASE_AUTH_DOMAIN),
+    projectId: requiredEnvironmentValue("VITE_FIREBASE_PROJECT_ID", import.meta.env.VITE_FIREBASE_PROJECT_ID),
+    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+    appId: requiredEnvironmentValue("VITE_FIREBASE_APP_ID", import.meta.env.VITE_FIREBASE_APP_ID),
   }, "survey-page");
   database = getFirestore(app);
   if (import.meta.env.VITE_USE_FIREBASE_EMULATORS === "true") {
